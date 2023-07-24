@@ -1,0 +1,7 @@
+Code has 2 things-
+
+1) Functional(Human)
+2) Security and redundancy(Sonarqube)
+
+
+to review security and resundancy we have sonarqube
