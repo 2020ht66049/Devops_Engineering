@@ -1,0 +1,7 @@
+Unit, integration, system, performance, user-acceptance, regression.
+
+Testing terminology
+===================
+Suite.
+TC.
+XML.

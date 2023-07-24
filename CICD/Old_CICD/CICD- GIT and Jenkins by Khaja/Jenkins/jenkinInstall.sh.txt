@@ -1,0 +1,13 @@
+# Installing JDK
+sudo apt update
+sudo apt install openjdk-11-jdk
+
+#Installing the weekly release
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+apt install sysvbanner
+echo "Jenkin is installed you can validate logs at /var/log/jenkins/jenkins.log"
+banner jenkin

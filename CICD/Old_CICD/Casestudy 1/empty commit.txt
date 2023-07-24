@@ -1,0 +1,5 @@
+git commit --allow-empty -m "Empty-Commit"
+git push origin HEAD:refs/for/master
+
+
+When in jenkins, when we have no way to trigger build manually then we can use it.
