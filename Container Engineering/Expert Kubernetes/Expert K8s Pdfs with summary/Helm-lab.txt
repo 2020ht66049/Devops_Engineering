@@ -1,0 +1,9 @@
+Refs: https://helm.sh/docs/intro/install/
+$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+$ chmod 700 get_helm.sh
+$ ./get_helm.sh
+
+#Verifying helm
+controlplane $ helm version
+version.BuildInfo{Version:"v3.7.1", 
+GitCommit:"1d11fcb5d3f3bf00dbe6fe31b8412839a96b3dc4", GitTreeState:"clean", GoVersion:"go1.16.9"}

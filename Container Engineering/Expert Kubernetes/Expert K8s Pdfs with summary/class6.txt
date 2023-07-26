@@ -1,0 +1,3 @@
+compressible vs non compressible
+adding more CPU dynamically
+adding memory dynamically

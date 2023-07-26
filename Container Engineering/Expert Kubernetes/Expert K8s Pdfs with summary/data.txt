@@ -1,0 +1,6 @@
+what is eathernet?
+
+root name space
+ck addressloop bs
+
+ARP protocal it wuld send incoming message to lined output device

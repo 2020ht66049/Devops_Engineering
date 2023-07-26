@@ -1,0 +1,10 @@
+genric interface
+multiple authentication provider
+role - capability
+binding: assigning to one or more 
+
+user and service account
+
+authentication autherizing
+
+IAM - google cloud

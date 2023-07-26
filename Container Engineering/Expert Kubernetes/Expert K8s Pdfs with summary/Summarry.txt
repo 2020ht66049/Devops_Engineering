@@ -1,0 +1,141 @@
+Chapter1
+Monolithic vs Microservice
+Condtion to declare a service as microservice.(must have db connection)
+How to mictoservices are communicated with each other.(by API Call http or curl)
+stangler pattern
+
+Chapter2
+What is CNI(Container networking interface)
+Rule for creating container networking interface.
+NAT(Network address translator)>> Public to private communication
+CIDR(Classless inter domain routing) range
+Kubernetes network example>> calico, fannel
+
+Chapter3
+ARP(Address resolution protocal, and how it works)
+Ethernet(root ethernet and virtual ethernet)
+Localhost for communication between two container withing same host.
+Container bridge for communication between pod with host.
+
+Chapter4:
+How communication happen between two pods in different host
+container overlay
+ARP protocol
+
+Chapter5:
+How communication happen between service and pods
+ userspace
+ IVPS: it's Kubernates native load balancing with round robin algorithm(you can change algorithm)
+ IPTABLES: it's linux feature for networking communication.
+Note: IVPS is the best, and we follow it.
+
+IPTABLES: Based on user contion accept/reject traffic.
+  Table>> Filter(Default)- allow/deny packet >> NAT table -NAT related >> Mangle>>Modify IP Headers
+           RAW>> connection tracking security>> for Security purpose
+  chains>> Pre-routing>Input>forward>output>post-roting
+  Rules>> User defined command to modify networking rule.
+          Matching-component: condition, protocol, source, destination
+          Target component
+
+Chapter6: Foundational Pattern – Predictable Demands
+   Compressible resouce – Which can be added dynamically.>> CPU
+   Incompressible – Which can't be added dynamically.>> Memory
+   QOS: 1) Best Effort, 2) Burstable and 3) Guaranteed.(Param: resource and limit)
+   Kill Criteria: Best then Burstable and then Guaranteed (Very less chances to kill) 
+
+Chapter7: Docker image revesion
+   Creating docker image.
+   running created docker image and validate it's utilization.
+
+Chapter8: Health check probe
+   Liveness probe => ps -ef | grep java
+   readyness probe => HTTP 200 code
+
+Chapter9: Managed Life Cycle
+   SIGTERM signal:
+   SIGKILL signal:
+
+Chapter10: Setting up cluster
+   Node selector
+   Node affinity<Node selector with operator>
+
+Chapter11: Container placement
+   Pod affinity: container in same pod.
+   anti affinity: opposity to pod affinity.
+   taints: not allowed pod to schedule if present in node.(K8 master)
+   tolerance: 1) effect=NoSchedule
+              2) effect=PreferNoSchedule)
+   Bare pods that are not managed by a replication controller will be not rescheduled upon node disruption.
+
+Chapter12:
+   Data, Database, CURD operation, DBMS, Need of volume, PV, PVC, storage class, configmap, secrates
+
+Chapter13:
+   What is Stateful application
+   Example of stateful application? >> Splunk, ELK
+   Combination of stateful and stateless services
+
+Chapter14:
+   Comparision between deployment set and replica set.
+
+Chapter15:
+   Singleton services: Updating database. observing message from Q in serquential order.
+
+Chapter16:
+   Services: Cluster-ip, nodeport, headless and loadbalancer.
+
+Chapter17:
+   Init, sidecar and Adaptor(Multiple microservices generating multipe logs> making them in one formate)
+
+Chapter18:
+   Ambasdor pattern > it's kind of proxy services.
+
+Chapter19:
+   Config map and secrates
+
+Chapter20:
+   Concept of developing microservices application for invetory for e-commerce application.
+
+Chapter21:
+   Understanding components of microservices(Database and front-end)
+
+Chapter22:
+   Docker compose(introduction and depends on instruction)
+
+Chapter23: RBAC- Authentication, autherization,
+           Namespace role and binding, 
+           Cluster role and binding.
+
+Chapter24: Aggregating ClusterRoles(combination of 2 role)
+           Deployer, Admin, monitor, ISA security admin
+
+Chapter25: Helm, installation manager
+           Installing helm, installing my-sql by helm.
+
+Chapter26: Helm2 vs Helm3 comparision
+           
+
+          
+ 
+   
+      
+   
+   
+   
+
+
+
+   
+
+   
+
+  
+
+
+
+   
+
+
+
+
+
